@@ -279,7 +279,7 @@ class music(commands.Cog):
     async def feedback(self, ctx):
         user = await self.bot.fetch_user("773654004332101673")
         if ctx.message.content != "*feedback":
-            await user.send(str(ctx.author.name + ": " + ctx.message.content))
+            await user.send(str(ctx.author.name + ": " + ctx.message.content[10:]))
             await ctx.send("Thank you for your feedback!")
         else:
             await ctx.send("Please enter a message!")
